@@ -1,4 +1,4 @@
-// File: /Users/jashanveersingharora/Project/Skybyte/app/page.tsx
+// File: /Users/gunkiratsingh/Documents/YEAR3/PROJECTS/Skybyte/app/page.tsx
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
