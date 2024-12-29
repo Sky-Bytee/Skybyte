@@ -19,7 +19,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { createAccount } from "@/lib/actions/user.actions"
 import OTPModal from "./OTPModal"
-
+import { signInUser } from "@/lib/actions/user.actions"
 type FormType = "sign-in" | "sign-up";
 
 const authFormSchema = (formType: FormType) => {
@@ -48,10 +48,11 @@ const AuthForm = ({type}: {type: FormType}) => {
         setErrorMessage('');
 
         try {
-          const user = await createAccount({
+          const user = 
+          type==="sign-up" ? await createAccount({
             fullName: values.fullName || "",
             email: values.email,
-          });
+          }): await signInUser({email: values.email});
 
           setaccountId(user.accountId);
           
