@@ -5,7 +5,7 @@ import Sidebar from '@/components/Sidebar'
 import { getcurrentUser } from '@/lib/actions/user.actions'
 import { redirect } from 'next/navigation'
 import { Toaster } from "@/components/ui/toaster";
-
+import "../globals.css";
 const layout = async({children}:{children: React.ReactNode}) => {
   const currentUser = await getcurrentUser();
 

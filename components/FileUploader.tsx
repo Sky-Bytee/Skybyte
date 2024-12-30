@@ -9,6 +9,7 @@ import { MAX_FILE_SIZE } from "@/constants";
 import { useToast } from "@/hooks/use-toast";
 import { uploadFile } from "@/lib/actions/file.actions";
 import { usePathname } from "next/navigation";
+import "../app/globals.css";
 
 interface Props {
   ownerId: string

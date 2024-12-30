@@ -4,6 +4,7 @@ import Search from '@/components/Search'
 import {Button} from "@/components/ui/button"
 import FileUploader from '@/components/FileUploader'
 import {signOutUser} from '@/lib/actions/user.actions'
+import "../app/globals.css";
 const Header = ({ userId,accountId,}: {
   userId: string;
   accountId: string;
