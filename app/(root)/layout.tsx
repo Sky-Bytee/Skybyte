@@ -2,12 +2,12 @@ import React from 'react'
 import Header from '@/components/Header'
 import MobileNavigation from '@/components/MobileNavigation'
 import Sidebar from '@/components/Sidebar'
-import { getcurrentuser } from '@/lib/actions/user.actions'
+import { getcurrentUser } from '@/lib/actions/user.actions'
 import { redirect } from 'next/navigation'
 import { Toaster } from "@/components/ui/toaster";
 
 const layout = async({children}:{children: React.ReactNode}) => {
-  const currentUser = await getcurrentuser();
+  const currentUser = await getcurrentUser();
 
   if(!currentUser) return redirect('/sign-in');
   return (

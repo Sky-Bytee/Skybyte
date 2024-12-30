@@ -6,7 +6,7 @@ import { appwriteConfig } from "@/lib/appwrite/config";
 import { ID, Models, Query } from "node-appwrite";
 import { constructFileUrl, getFileType, parseStringify } from "@/lib/utils";
 import { revalidatePath } from "next/cache";
-import { getcurrentuser } from "@/lib/actions/user.actions";
+import { getcurrentUser } from "@/lib/actions/user.actions";
 import { UploadFileProps } from "@/types";
 
 const handleError = (error: unknown, message: string) => {
