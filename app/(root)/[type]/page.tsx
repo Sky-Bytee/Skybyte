@@ -7,16 +7,14 @@ import { getFileTypesParams } from "@/lib/utils";
 import { FileType } from "@/types";
 import { SearchParamProps } from "@/types";
 
-const Page = async ({ params }: SearchParamProps) => {
+const Page = async ({ searchParams, params }: SearchParamProps) => {
   const type = ((await params)?.type as string) || "";
-
-//   const searchText = ((await searchParams)?.query as string) || "";
-//   const sort = ((await searchParams)?.sort as string) || "";
+  const searchText = ((await searchParams)?.query as string) || "";
+  const sort = ((await searchParams)?.sort as string) || "";
 
   const types = getFileTypesParams(type) as FileType[];
 
-  const files = await getFiles();
-//   { types, searchText, sort }
+  const files = await getFiles({types: types, searchText, sort});
   return (
     <div className="page-container">
       <section className="w-full">
